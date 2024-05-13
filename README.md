@@ -1,9 +1,9 @@
 # 3AI-2024-Car-Config
 Projekt se zaměřuje na vytvoření konfigurátoru, který umožní uživatelům sestavit si vlastní automobil na základě následujících možností:
-Základní auta: Dvě základní modely aut (např. Model A a Model B).
-Barvy: 12 variant barvy pro každý z modelů (např. černá, bílá, červená, modrá atd.).
-Typy karoserií: Hatchback, Sedan, Kombi
-Volitelné vylepšení: LED světlomety jako přídavná možnost.
+## Základní auta: Dvě základní modely aut (např. Model A a Model B).
+## Barvy: 12 variant barvy pro každý z modelů (např. černá, bílá, červená, modrá atd.).
+## Typy karoserií: Hatchback, Sedan, Kombi
+## Volitelné vylepšení: LED světlomety jako přídavná možnost.
 
 Obrázek auta a celková cena se budou dynamicky měnit na základě uživatelské konfigurace.
 
