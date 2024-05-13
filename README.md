@@ -10,7 +10,7 @@ Obrázek auta a celková cena se budou dynamicky měnit na základě uživatelsk
 Úkoly pro Grafickou Skupinu
     Vytvoření brandu konfigurátoru:
         Navrhnout logo a vizuální identitu konfigurátoru.
-        Připravit designy pro marketingovou kampaň, která bude zahrnovat bannery, reklamy, a propagační materiály pro sociální média.
+        Připravit designy pro marketingovou kampaň, která bude zahrnovat bannery, reklamy a propagační materiály pro sociální média.
 
     Design webové stránky:
         Navrhnout uživatelské rozhraní pro všechny tři stránky projektu (marketingová stránka, konfigurátor, objednávkový formulář) s důrazem na responsivní a atraktivní design.
@@ -20,7 +20,6 @@ Obrázek auta a celková cena se budou dynamicky měnit na základě uživatelsk
         Připravit grafický obsah pro online a offline propagaci. Založit profily na sociálních sítích.
 
 Úkoly pro webovou skupinu
-
     Vývoj webu:
         Postavit základní strukturu webu pomocí HTML a CSS.
         Implementovat interaktivní prvky pomocí JavaScriptu, které umožní uživatelům měnit typ auta, barvu, karoserii, a přidávat LED světlomety.
