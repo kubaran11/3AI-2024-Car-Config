@@ -33,12 +33,12 @@ Obrázek auta a celková cena se budou dynamicky měnit na základě uživatelsk
     Zabezpečení a optimalizace:
         Zajistit, že web je bezpečný a optimalizovaný pro rychlé načítání.
 
-Omezení času
+Omezení času: 
     Celý projekt musí být dokončen a připraven k prezentaci během jednoho týdne.
 
-Koordinace a komunikace
+Koordinace a komunikace: 
     Použití nástroje GitHub pro komunikaci a sledování pokroku úkolů.
 
-Dodatečné požadavky
+Dodatečné požadavky: 
     Závěrečná prezentace projektu bude zahrnovat demo konfigurátoru a přehled marketingové kampaně.
     Každý tým představí, jak splnil své úkoly a jaké byly hlavní výzvy.
