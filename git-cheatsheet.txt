@@ -1,0 +1,27 @@
+git clone https://github.com/kubaran11/3AI-2024-Car-Config
+
+// stahne se celej kod
+
+git checkout db
+
+// switchne db branch na pracovni prostredi (?)
+
+git pull
+
+// update na posledni commit
+
+git add -all
+
+// prida vsechny soubory ktere byly zmeneny
+
+git status
+
+// checkni ze neprepisujes neco jinyho, pouze spravne soubory
+
+git commit -m "..."
+
+// do uvozovek zpravu, ktera popisuje commit. Ukaze se na strance spolecne s vasim jmenem.
+
+git push origin -u db
+
+// pushne addly veci na db branch
