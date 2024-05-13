@@ -10,7 +10,7 @@ git pull
 
 // update na posledni commit
 
-git add -all
+git add --all
 
 // prida vsechny soubory ktere byly zmeneny
 
