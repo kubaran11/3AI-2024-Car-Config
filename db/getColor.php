@@ -7,13 +7,13 @@ function getColorNames(){
 
     $colorNames = array();
 
-    $sql = "SELECT name, RGB, price FROM Color";
+    $sql = "SELECT name, rgb, price FROM Color";
     $stmt = $conn -> prepare ($sql);
     $stmt -> execute();
-    $stmt -> bind_result($name $RGB $price);
+    $stmt -> bind_result($name, $rgb, $price);
     while ($stmt -> fetch())
     {
-        array_push($colorNames, $name, $RGB, $price);
+        array_push($colorNames, array("name" => $name, "rgb" => $rgb, "price" => $price));
     }
 
     return $colorNames;
