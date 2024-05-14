@@ -5,15 +5,15 @@ require "conn.php";
 function getColorNames(){
     $conn = $GLOBALS["conn"];
 
-    $carNames = array();
+    $colorNames = array();
 
-    $sql = "SELECT name FROM Color";
+    $sql = "SELECT name, RGB, price FROM Color";
     $stmt = $conn -> prepare ($sql);
     $stmt -> execute();
-    $stmt -> bind_result($name);
+    $stmt -> bind_result($name $RGB $price);
     while ($stmt -> fetch())
     {
-        array_push($colorNames, $name);
+        array_push($colorNames, $name, $RGB, $price);
     }
 
     return $colorNames;
