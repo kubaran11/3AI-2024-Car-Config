@@ -7,13 +7,13 @@ function getAddons(){
 
     $addons = array();
 
-    $sql = "SELECT idAddons, label, price FROM Addons";
+    $sql = "SELECT idAddons, name, price FROM Addons";
     $stmt = $conn -> prepare ($sql);
     $stmt -> execute();
-    $stmt -> bind_result($idAddons, $label, $price);
+    $stmt -> bind_result($idAddons, $name, $price);
     while ($stmt -> fetch())
     {
-        array_push($addons, array("label" => $label, "price" => $price, "idAddons" => $idAddons));
+        array_push($addons, array("name" => $name, "price" => $price, "idAddons" => $idAddons));
     }
 
     return $addons;
