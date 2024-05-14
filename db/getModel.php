@@ -2,7 +2,7 @@
 
 require "conn.php";
 
-function getCarInfo(){
+function getModel(){
     $conn = $GLOBALS["conn"];
 
     $carFullInfo = array();
@@ -10,8 +10,7 @@ function getCarInfo(){
     $sql = "SELECT Model.url, Car.model, Color.name, Body.name, Addons.name FROM Model 
             JOIN Car ON Model.idCar=Car.id 
             JOIN Color ON Color.id=Model.idColor 
-            JOIN Body ON Body.id=Model.idBody 
-            JOIN Addons ON Addons.id=Model.idAddons";
+            JOIN Body ON Body.id=Model.idBody JOIN Addons ON Addons.id=Model.idAddons";
     $stmt = $conn -> prepare ($sql);
     $stmt -> execute();
     $stmt -> bind_result($url, $model, $color, $body, $addon);
