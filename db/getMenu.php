@@ -5,13 +5,12 @@ function getMenuItems($id) {
     $menuItems = array();  
     $sql = "SELECT information FROM Menu WHERE id = ?";
     $stmt = $conn->prepare($sql); 
-    $smtm = $bind_param("int")$id;
+    $smtm = $bind_param("i", $id);
     $stmt->execute();  
     $stmt->bind_result($itemName);  
     $smtm->fetch();
     return $menuItems; 
 }
-
 ?>
 
 // index.php
