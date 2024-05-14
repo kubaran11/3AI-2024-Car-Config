@@ -18,3 +18,4 @@ function getCarInfo(){
 
     return $carFullInfo;
 }
+?>
