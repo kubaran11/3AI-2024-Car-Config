@@ -12,12 +12,3 @@ function getMenuItems($id) {
     return $menuItems; 
 }
 ?>
-
-// index.php
-<?php
-require "db/getMenu.php";
-$menuItem = "";
-if(isset($_GET["menuItem"])){
-    $menuItem = $_GET["menuItem"];
-}
-//
