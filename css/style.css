@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000; 
+    color: #fff;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction:row;
+    align-items: center;
+    background-color: rgb(20,20,20); 
+    padding: 10px 20px;
+    padding-right:60px;
+}
+.text {
+    position: relative;
+    display: block;
+    background-image: url("../images/spectra_slogan.png");
+    background-position:center;
+    background-size:cover;
+
+}
+.text marquee {
+    margin-top:20%
+}
+.container > a{
+    font-size: larger;
+}
