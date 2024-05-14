@@ -1,4 +1,5 @@
 var index = 1;
+var maxTableSize = 0;
 
 function getColorFromPHP(){
     console.log(index);
@@ -6,7 +7,6 @@ function getColorFromPHP(){
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             changeColorbox(this.responseText);
-            console.log(this.responseText)
         }
     };
     xhttp.open("GET", "getColorRequest.php?getColorRGB=" + index, true);
@@ -28,17 +28,31 @@ function hexToRgb(hex) {
     document.getElementById("colorbox").style.backgroundColor = "rgb(" + yaklarman.r + "," + yaklarman.g + "," + yaklarman.b + ")";
 }
 
+function getTableMaxSize(){
+    const xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            maxTableSize = this.responseText;
+        }
+    };
+    xhttp.open("GET", "getTableSize.php", true);
+    xhttp.send();
+
+}
+
 function newPage(){
     getColorFromPHP();
     document.getElementById("indexID").textContent = "Current color index: " + index;
+    console.log(getTableMaxSize());
 }
 
 function updateNext(){
-    if (index < 12){ 
-        index += 1; 
+    if (index < maxTableSize){
+        index += 1;
         getColorFromPHP();
+        
         document.getElementById("indexID").textContent = "Current color index: " + index;
-    }}
+    } }
     
 
 function updatePrev(){
