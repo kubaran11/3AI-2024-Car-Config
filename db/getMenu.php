@@ -1,23 +1,14 @@
 <?php
-
 require "conn.php";  
-
-function getMenuItems() {
+function getMenuItems($id) {
     $conn = $GLOBALS["conn"]; 
-
     $menuItems = array();  
-
-
-    $sql = "SELECT information FROM Menu";
+    $sql = "SELECT information FROM Menu WHERE id = ?";
     $stmt = $conn->prepare($sql); 
+    $smtm = $bind_param("i", $id);
     $stmt->execute();  
     $stmt->bind_result($itemName);  
-
-    while ($stmt->fetch()) {
-        array_push($menuItems, $itemName);
-    }
-
+    $smtm->fetch();
     return $menuItems; 
 }
-
 ?>
