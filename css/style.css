@@ -4,7 +4,7 @@ body {
     background-color: #000; 
     color: #fff;
 }
-header .container {
+header .box {
     display: flex;
     justify-content: space-between;
     flex-direction:row;
@@ -13,7 +13,7 @@ header .container {
     padding: 10px 20px;
     padding-right:60px;
 }
-.text {
+.auto {
     position: relative;
     display: block;
     background-image: url("../images/spectra_slogan.png");
@@ -21,9 +21,9 @@ header .container {
     background-size:cover;
 
 }
-.text marquee {
+.auto marquee {
     margin-top:20%
 }
-.container > a{
+.box > a{
     font-size: larger;
 }
