@@ -136,9 +136,9 @@
                 if (imagesToShow[index]) {
                     image.src = imagesToShow[index];
                     if (imageType === 'right' && index === 0) {
-                        image.style.display = 'block'; // Show the first image for the right red car
+                        image.style.display = 'none'; // Show the first image for the right red car
                     } else if (imageType === 'left') {
-                        image.style.display = 'block'; // Always show images for the left car
+                        image.style.display = 'none'; // Always show images for the left car
                     } else {
                         image.style.display = 'none'; // Hide images for other cases
                     }
