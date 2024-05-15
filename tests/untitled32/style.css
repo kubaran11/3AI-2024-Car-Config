@@ -1,0 +1,55 @@
+    body{
+        background-color: #141414;
+    }
+.images-container {
+    max-width: 100%;
+    height: 100%;
+    margin: 0 2%;
+    display: flex;
+}
+
+.images-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 400ms;
+}
+
+.images-container .image {
+    position: relative;
+    overflow: hidden;
+}
+
+.images-container .description {
+    position: absolute;
+    bottom: -180px;
+    background: rgba(0,0,0,0.55);
+    color: #fff;
+    padding: 1px 100px;
+    box-shadow: 0 -3px 3px rgba(0, 0, 0, 0.4);
+    transition: all 400ms;
+}
+.inbox {
+    opacity: 1; !important;
+}
+
+.images-container .description h2 {
+    color: #50ebff;
+}
+
+.images-container .image:hover .description {
+    opacity: 1;
+    bottom: 0;
+}
+
+.images-container .image:hover img {
+    transform: scale(1.1);
+}
+
+.images-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
