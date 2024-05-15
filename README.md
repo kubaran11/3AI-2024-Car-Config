@@ -7,7 +7,7 @@ Projekt se zaměřuje na vytvoření konfigurátoru, který umožní uživatelů
 
 Obrázek auta a celková cena se budou dynamicky měnit na základě uživatelské konfigurace.
 
-Úkoly pro Grafickou Skupinu
+Úkoly pro grafickou skupinu
     Vytvoření brandu konfigurátoru:
         Navrhnout logo a vizuální identitu konfigurátoru.
         Připravit designy pro marketingovou kampaň, která bude zahrnovat bannery, reklamy a propagační materiály pro sociální média.
