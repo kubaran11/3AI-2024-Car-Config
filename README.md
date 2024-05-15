@@ -23,7 +23,7 @@ Obrázek auta a celková cena se budou dynamicky měnit na základě uživatelsk
 Úkoly pro webovou skupinu
     
     Vývoj webu:
-        Postavit základní strukturu webu pomocí HTML a CSS.
+        Postavit základní strukturu webu pomocí HTML a CSS, který bude obsahovat minimálně tyto tři stránky (marketingová úvodní stránka, konfigurátor, objednávkový formulář).
         Implementovat interaktivní prvky pomocí JavaScriptu, které umožní uživatelům měnit typ auta, barvu, karoserii, a přidávat LED světlomety.
         Dynamicky aktualizovat obrázky a cenu v závislosti na uživatelských volbách.
 
