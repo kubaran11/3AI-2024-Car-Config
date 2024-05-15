@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Pictures</title>
+    <style>
+        /* Styles for initial view */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10%; 
+        }
+
+        .image {
+            width: 45%; 
+            max-width: 400px; 
+            cursor: pointer;
+        }
+
+        /* Styles for expanded view */
+        .expanded-container {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* Center align vertically */
+            margin-top: 35%; 
+        }
+
+        .expanded-image {
+            width: 60%; 
+            max-width: 600px; 
+            margin-bottom: 20%; 
+        }
+
+        /* Styles for arrow icons */
+        .arrow {
+            cursor: pointer;
+            font-size: 24px;
+            margin-top: 10px;
+            position: absolute;
+            top: 115%;
+            transform: translateY(-50%);
+        }
+
+        .arrow.left {
+            left: 25%;
+        }
+
+        .arrow.right {
+            right: 25%;
+        }
+
+        /* Styles for selected image section */
+        .selected-image-section {
+            margin-top: 50px;
+            text-align: center;
+        }
+        
+        .selected-image {
+            max-width: 400px; 
+            margin: 0 auto; /* Center horizontally */
+        }
+
+
+        /* Styles for the Select button */
+        .select-button {
+            display: none; /* Initially hidden */
+            margin-top: 50%; 
+            position: absolute; /* Change position to absolute */
+            bottom: 20px; /*  distance from the bottom */
+            left: 50%; /* Position horizontally in the middle */
+            transform: translateX(-50%); /* Center horizontally */
+        }
+
+
+        /* Styles for the footer */
+        footer {
+            text-align: center;
+            margin-top: 20px; 
+        }
+
+        /* Custom style for red car */
+        /*.red-car {
+            margin-bottom: 10px; 
+        }*/
+        
+    </style>
+</head>
+<body>
+    <!-- Initial view with car images -->
+    <div class="container">
+        <img class="image" src="obrazy-projekt/car.png" alt="Left Image" onclick="showExpandedView('left')">
+        <img class="image red-car" src="obrazy-projekt/car_red.png" alt="Right Image" onclick="showExpandedView('right')">
+    </div>
+
+    <!-- Expanded view with more options -->
+    <div class="expanded-container" id="expandedContainer">
+        <img class="expanded-image" src="obrazy-projekt/car.png" alt="Next Left Image">
+        <img class="expanded-image" src="obrazy-projekt/car_right_gray.png" alt="Next Left Image">
+
+        <!-- Left and Right arrow icons -->
+        <div>
+            <span class="arrow left" onclick="cycleImages()">◄</span>
+            <span class="arrow right" onclick="cycleImages('right')">►</span>
+        </div>
+    </div>
+
+    <!-- Section for selected image -->
+    <div class="selected-image-section" id="selectedImageSection">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Select button -->
+        <button class="select-button" onclick="selectImage()">Select</button>
+    </footer>
+
+    <script>
+        let currentImageIndex = 0; // Initialize current image index
+        const leftCars = ['obrazy-projekt/car.png'];
+        const redCars = ['obrazy-projekt/car_red.png','obrazy-projekt/car_right.png'];
+
+        function showExpandedView(imageType) {
+            const expandedContainer = document.getElementById('expandedContainer');
+            const expandedImages = expandedContainer.querySelectorAll('.expanded-image');
+
+            // Show expanded view
+            expandedContainer.style.display = 'flex';
+
+            // Set appropriate image array based on imageType
+            const imagesToShow = (imageType === 'left') ? leftCars : redCars;
+
+            // Show appropriate images
+            expandedImages.forEach((image, index) => {
+                if (imagesToShow[index]) {
+                    image.src = imagesToShow[index];
+                    if (imageType === 'right' && index === 0) {
+                        image.style.display = 'block'; // Show the first image for the right red car
+                    } else if (imageType === 'left') {
+                        image.style.display = 'block'; // Always show images for the left car
+                    } else {
+                        image.style.display = 'none'; // Hide images for other cases
+                    }
+                } else {
+                    image.style.display = 'none';
+                }
+            });
+
+            // Scroll down to the expanded view
+            expandedContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            // Reset current image index
+            currentImageIndex = (imageType === 'right') ? 0 : 1; // Reset to first red car index if right, otherwise to first gray car index
+
+            // Show the Select button
+            const selectButton = document.querySelector('.select-button');
+            selectButton.style.display = 'block';
+        }
+
+        function cycleImages() {
+            const expandedImages = document.querySelectorAll('.expanded-image');
+            const numImages = expandedImages.length;
+
+            // Hide all images
+            expandedImages.forEach(image => {
+                image.style.display = 'none';
+            });
+
+            // Calculate next image index
+            currentImageIndex = (currentImageIndex + 1) % numImages;
+
+            // Display the next image
+            expandedImages[currentImageIndex].style.display = 'block';
+        }
+
+    /*    function selectImage() {
+    const selectButton = document.querySelector('.select-button');
+    // Check if the button is already disabled
+    if (!selectButton.disabled) {
+        const selectedImageSection = document.getElementById('selectedImageSection');
+        const expandedImages = document.querySelectorAll('.expanded-image');
+        const selectedImage = expandedImages[currentImageIndex].cloneNode(true);
+        selectedImageSection.appendChild(selectedImage);
+        // Disable the button after it's been clicked
+        selectButton.disabled = true;
+    }
+}*/
+
+function selectImage() {
+    const selectedImageSection = document.getElementById('selectedImageSection');
+    const expandedImages = document.querySelectorAll('.expanded-image');
+    const selectedImage = expandedImages[currentImageIndex].cloneNode(true);
+    selectedImageSection.appendChild(selectedImage);
+}
+
+    </script>
+</body>
+</html>
