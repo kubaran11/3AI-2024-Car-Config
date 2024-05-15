@@ -27,7 +27,7 @@ Obrázek auta a celková cena se budou dynamicky měnit na základě uživatelsk
         Implementovat interaktivní prvky pomocí JavaScriptu, které umožní uživatelům měnit typ auta, barvu, karoserii, a přidávat LED světlomety.
         Dynamicky aktualizovat obrázky a cenu v závislosti na uživatelských volbách.
 
-    Backend a Databáze:
+    Backend a databáze:
         Vytvořit PHP skripty pro zpracování uživatelských vstupů a ukládání konfigurací do databáze.
         Nastavit MySQL databázi pro uchování informací o dostupných možnostech a uživatelských konfiguracích.
 
