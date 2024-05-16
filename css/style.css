@@ -13,6 +13,10 @@ header .box {
     padding: 10px 20px;
     padding-right:60px;
 }
+.box a{
+    text-decoration: none;
+    color: white;
+}
 .auto {
     position: relative;
     display: block;
@@ -26,4 +30,85 @@ header .box {
 }
 .box > a{
     font-size: larger;
+}
+.blok1{
+    height: 100vh;
+
+}
+
+
+.blok2{
+    height: 100vh;
+    border-top: 1px solid rgb(255, 255, 255);
+    
+}
+
+    .blok2 .images-container {
+        max-width: 100%;
+        height: 100%;
+        margin: 0 2%;
+        display: flex;
+    }
+
+    .blok2 .images-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 400ms;
+        cursor: pointer;
+
+    }
+
+    .blok2 .images-container .image {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .blok2 .images-container .description {
+        position: absolute;
+        bottom: -180px;
+        background: rgba(0,0,0,0.55);
+        color: #fff;
+        padding: 1px 100px;
+        box-shadow: 0 -3px 3px rgba(0, 0, 0, 0.4);
+        transition: all 400ms;
+    }
+
+    .blok2 .inbox {
+        opacity: 1; 
+    }
+
+    .blok2 .images-container .description a {
+          text-decoration: none;
+        color: white;
+    }
+
+
+    .blok2 .images-container .image:hover .description {
+        opacity: 1;
+        bottom: 0;
+    }
+
+    .blok2 .images-container .image:hover img {
+        transform: scale(1.1);
+    }
+
+    .blok2 .images-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+    }
+
+
+.blok5{
+    height: 100vh;
+    border-top: 1px solid rgb(255, 255, 255);
+    display: flex 1;
+}
+.blok5 form{
+    display: inline-block;
+    align-items: right;
+    justify-content: space-between;
 }
