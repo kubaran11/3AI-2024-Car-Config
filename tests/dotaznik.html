@@ -15,70 +15,55 @@
             justify-content: space-between;
             align-items: flex-start;
         }
+        
         .car-info {
-            width: 45%;
-            margin-right: 200px; /* Posunutí doprava */
+            max-width: 50%;
+            margin-right: 20px;
         }
+
         .car-info img {
-            width: 100%;
+            max-width: 100%;
             height: auto;
-            margin-bottom: 10px;
         }
-        .price {
-            text-align: center;
-            font-size: 24px;
-        }
+
         .questionnaire {
-            width: 20%; /* Zmenšeno na 40% */
-            background-color: rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin-top: 200px; /* Přidán margin-top */
-            margin-right: auto; /* Zarovnání doprava */
-            margin-left: 200px; /* Zarovnání doprava */
+            max-width: 50%;
         }
+        
         .container {
-            background-color: #000000;
-            color: white;
+            background-color: #fff;
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
         }
+        
         h1 {
             text-align: center;
-            margin-bottom: 30px;
+            color: #333;
         }
-        .car-heading {
-            color: white;
-            text-align: center;
-        }
-        .questionnaire-heading {
-            color: rgb(255, 255, 255);
-        }
+        
         label {
             font-weight: bold;
-            color: rgb(255, 255, 255);
-            background-color: #222222;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
         }
+        
         input[type="email"],
         input[type="text"],
         input[type="tel"] {
             width: calc(100% - 22px);
-            background-color: #000000;
             padding: 8px;
             margin-bottom: 10px;
-            border: 1px solid rgb(109, 109, 109);
+            border: 1px solid #ccc;
             border-radius: 4px;
         }
-        /* Checkbox styly */
+        
         input[type="checkbox"] {
             margin-right: 5px;
-            display: block;
-            color: rgb(0, 0, 0);
         }
+        
         input[type="submit"] {
-            background-color: #020083;
-            color: rgb(255, 255, 255);
+            background-color: #007bff;
+            color: #fff;
             border: none;
             border-radius: 4px;
             padding: 10px 20px;
@@ -86,32 +71,37 @@
             width: 100%;
             margin-top: 10px;
         }
+        
         input[type="submit"]:hover {
-            background-color: #000000;
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <div class="container questionnaire">
-        <h1 class="questionnaire-heading">Order Confirmation</h1>
-        <form action="#" method="get">
-            <input type="text" name="Firstname" placeholder="Enter your first name" class="form-text-item">
-            <input type="text" name="Surname" placeholder="Enter your last name" class="form-text-item">
-            <input type="email" name="email" placeholder="Enter your email" class="form-text-item" id="email-item" onchange="checkEmail(this)">
-            <input type="tel" name="phone" placeholder="Enter your phone" class="form-text-item" id="phone-item" onchange="checkPhone(this)">
-            <label for="smlouva1">I agree to the terms and conditions:</label>
-            <input type="checkbox" name="smlouva1" id="smlouva1" class="form-text-item">
-            <label for="smlouva2">I agree with GDPR:</label>
-            <input type="checkbox" name="smlouva2" id="smlouva2" class="form-text-item">
-            <input type="submit" value="Odeslat">
-        </form>
-    </div>
+
     <div class="car-info">
-        <h1 class="car-heading">Final version Car</h1>
+        <h1>Finální verze auta</h1>
         <img src="slr.png" alt="Automobil">
         <div class="price">
-            Price: Kč500,000
+            Cena: Kč500,000
         </div>
     </div>
+
+    <div class="questionnaire">
+        <div class="container">
+            <h1>Dotazník</h1>
+
+            <form action="#" method="get">
+                <input type="text" name="Firstname" placeholder="Zadejte své křestní jméno" class="form-text-item">
+                <input type="text" name="Surname" placeholder="Zadejte své příjmení" class="form-text-item">
+                <input type="email" name="email" placeholder="Zadejte email" class="form-text-item" id="email-item" onchange="checkEmail(this)" required>
+                <input type="tel" name="phone" placeholder="Zadejte telefon" inputmode="numeric" pattern="[0-9]{9}" title="Pouze 9 čísel jsou povoleny" maxlength="9" required class="form-text-item" id="phone-item" onchange="checkPhone(this)">
+                <input type="checkbox" name="smlouva1" placeholder="Zaškrtněte následující" class="form-text-item">
+                <input type="checkbox" name="smlouva2" placeholder="Zaškrtněte následující" class="form-text-item">
+                <input type="submit" value="Odeslat">
+            </form>
+        </div>
+    </div>
+
 </body>
 </html>
