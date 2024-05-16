@@ -1,7 +1,7 @@
 <?php
 
-require "conn.php";
-require "getCar.php"
+require "db/conn.php";
+require "db/getCar.php"
 
 function getCarId(){
     $conn = $GLOBALS["conn"];
@@ -39,6 +39,7 @@ function getCarPrice(){
     return $price;
 
 }
+
 
 
 ?>

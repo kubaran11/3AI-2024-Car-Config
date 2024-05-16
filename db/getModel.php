@@ -1,24 +1,79 @@
 <?php
 
-require "conn.php";
+require "db/conn.php";
 
-function getModel(){
+function getId(){
     $conn = $GLOBALS["conn"];
 
-    $carFullInfo = array();
-
-    $sql = "SELECT Model.url, Car.model, Color.name, Body.name, Addons.name FROM Model 
-            JOIN Car ON Model.idCar=Car.id 
-            JOIN Color ON Color.id=Model.idColor 
-            JOIN Body ON Body.id=Model.idBody JOIN Addons ON Addons.id=Model.idAddons";
+    $sql = "SELECT id FROM model";
     $stmt = $conn -> prepare ($sql);
     $stmt -> execute();
-    $stmt -> bind_result($url, $model, $color, $body, $addon);
-    while ($stmt -> fetch())
-    {
-        array_push($carFullInfo, array("url" => $url, "model" => $model, "color" => $color, "body" => $body, "addon" => $addon));
-    }
+    $stmt -> bind_result($id);
+    $stmt -> fetch();
 
-    return $carFullInfo;
+    return $id;
+
 }
+
+function getCarId(){
+    $conn = $GLOBALS["conn"];
+
+    $sql = "SELECT idCar FROM Model";
+    $stmt = $conn -> prepare ($sql);
+    $stmt -> execute();
+    $stmt -> bind_result($idCar);
+    $stmt -> fetch();
+
+    return $idCar;
+
+}
+function getColorId(){
+    $conn = $GLOBALS["conn"];
+
+    $sql = "SELECT idColor FROM Model";
+    $stmt = $conn -> prepare ($sql);
+    $stmt -> execute();
+    $stmt -> bind_result($idColor);
+    $stmt -> fetch();
+   
+    return $idColor;
+
+}
+function getBodyId(){
+    $conn = $GLOBALS["conn"];
+
+    $sql = "SELECT idBody FROM Model";
+    $stmt = $conn -> prepare ($sql);
+    $stmt -> execute();
+    $stmt -> bind_result($idBody);
+    $stmt -> fetch();
+   
+    return $idBody;
+
+}
+function getAddonsId(){
+    $conn = $GLOBALS["conn"];
+
+    $sql = "SELECT idAddons FROM Model";
+    $stmt = $conn -> prepare ($sql);
+    $stmt -> execute();
+    $stmt -> bind_result($idAddons);
+    $stmt -> fetch();
+   
+    return $idAddons;
+
+}
+function getUrl(){
+    $conn = $GLOBALS["conn"];
+
+    $sql = "SELECT url FROM Model";
+    $stmt = $conn -> prepare ($sql);
+    $stmt -> execute();
+    $stmt -> bind_result($url);
+    $stmt -> fetch();
+   
+    return $url;
+
+}
+
 ?>

@@ -1,6 +1,6 @@
 <?php
 
-require "conn.php";
+require "db/conn.php";
 
 function getBody(){
     $conn = $GLOBALS["conn"];

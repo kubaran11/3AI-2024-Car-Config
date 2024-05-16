@@ -1,5 +1,5 @@
 <?php
-require "conn.php";  
+require "db/conn.php";  
 function getMenuItems($id) {
     $conn = $GLOBALS["conn"]; 
     $menuItems = array();  

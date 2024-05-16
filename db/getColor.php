@@ -1,22 +1,18 @@
 <?php
 
-require "conn.php";
+require "db/conn.php";
+require "db/getColor.php";
 
-function getColorNames(){
+function getColor(){
     $conn = $GLOBALS["conn"];
 
-    $colorNames = array();
-
-    $sql = "SELECT id, RGB, price, name FROM Color";
-    $stmt = $conn -> prepare ($sql);
-    $stmt -> execute();
-    $stmt -> bind_result($id, $rgb, $price, $name);
-    while ($stmt -> fetch())
-    {
-        array_push($colorNames, array("id" => $id, "name" => $name, "rgb" => $rgb, "price" => $price));
+    $colorInfo = array();
+    $sql = "SELECT name, hexCode, price FROM Colors LIMIT 12";
+    $stmt = $conn->prepare ($sql);
+    $stmt->bind_result ($name, $hexCode);
+    
+    while ($stmt->fetch()) {
+        array_push ($colorInfo, array("name" => $name, "hexCode" => $hexCode, "price" => $price));
     }
-
-    return $colorNames;
+    return $colorInfo;
 }
-
-?>
