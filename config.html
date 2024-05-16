@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Configuration</title>
+    <script src="js/config.js"></script>
+    <link rel="stylesheet" href="css/config.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ENIGMA</h1>
+            <h2>Combi</h2>
+        </div>
+    <div class="car-display">
+        <button class="arrow left">&lt;</button>
+        <div class="car">
+            <img src="images/auto.png" alt="Car" id="carImage">
+        </div>
+        <button class="arrow right">&gt;</button>
+    </div>
+    <div class="controls">
+        <button class="control-button" onclick="configureCar()">CONFIGURATE</button>
+    </div>
+    <div id="configView">
+        <img src="images/auto.png" alt="Configured Car">
+    </div>
+</div>
+</body>
+</html>

@@ -7,8 +7,7 @@ Projekt se zaměřuje na vytvoření konfigurátoru, který umožní uživatelů
 
 Obrázek auta a celková cena se budou dynamicky měnit na základě uživatelské konfigurace.
 
-Úkoly pro grafickou skupinu
-    
+Úkoly pro Grafickou Skupinu
     Vytvoření brandu konfigurátoru:
         Navrhnout logo a vizuální identitu konfigurátoru.
         Připravit designy pro marketingovou kampaň, která bude zahrnovat bannery, reklamy a propagační materiály pro sociální média.
@@ -21,13 +20,12 @@ Obrázek auta a celková cena se budou dynamicky měnit na základě uživatelsk
         Připravit grafický obsah pro online a offline propagaci. Založit profily na sociálních sítích.
 
 Úkoly pro webovou skupinu
-    
     Vývoj webu:
-        Postavit základní strukturu webu pomocí HTML a CSS, který bude obsahovat minimálně tyto tři stránky (marketingová úvodní stránka, konfigurátor, objednávkový formulář).
+        Postavit základní strukturu webu pomocí HTML a CSS.
         Implementovat interaktivní prvky pomocí JavaScriptu, které umožní uživatelům měnit typ auta, barvu, karoserii, a přidávat LED světlomety.
         Dynamicky aktualizovat obrázky a cenu v závislosti na uživatelských volbách.
 
-    Backend a databáze:
+    Backend a Databáze:
         Vytvořit PHP skripty pro zpracování uživatelských vstupů a ukládání konfigurací do databáze.
         Nastavit MySQL databázi pro uchování informací o dostupných možnostech a uživatelských konfiguracích.
 
