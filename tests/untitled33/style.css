@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #141414;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+
+}
+.wrapper{
+    margin: 150px auto;
+    width: 70%;
+    display: flex;
+    justify-content: left;
+}
+.wrappertop {
+    margin-bottom: 0; !important;
+}
+img {
+    max-width: 50%;
+    margin-right: 15px;
+}
+
+
+.text-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+    color: white;
+    font-family: brolimo;
+}
+.text-box p{
+    font-size: 16px;
+    max-width: 80%;
+}
+
+.wrapperbot {
+    margin-top: 50px; !important;
+}
+
+.imgowner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+}
+
+#left {
+    max-width: 70%; !important;
+}
+@font-face {
+    font-family: brolimo;
+    src: url(brolimo-brolimo-regular-400.otf);
+}
+
+div {
+    font-family: brolimo;
+}
